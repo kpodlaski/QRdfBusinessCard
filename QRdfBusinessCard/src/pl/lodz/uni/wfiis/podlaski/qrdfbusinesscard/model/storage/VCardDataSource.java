@@ -37,6 +37,7 @@ public class VCardDataSource {
 		if (vcard.getId() != -1) update=true;
 		//Check if there is in the Store Companies with the same Regon and Nip
 		List<VCard> identical = getVCardsForNipAndRegon(vcard.getNip(), vcard.getRegon());
+		System.out.println(identical.size());
 		if (identical.size()==1)
 		{
 			vcard.setId(identical.get(0).getId());
@@ -58,12 +59,14 @@ public class VCardDataSource {
 		val.put(VCardTable.COLUMN_IN_CONTACTS, 0);
 		val.put(VCardTable.COLUMN_URI, vcard.getUri());
 		if (update){
+			System.out.println("update");
 			Log.w(VCardDataSource.class.getName(), "Update record with name:"+vcard.getName()+" and id:"+vcard.getId());
 			db.update(VCardTable.VCARD_TABLE, val, VCardTable.COLUMN_ID +"="+vcard.getId(), null);
 		}
 		else{
 			Log.w(VCardDataSource.class.getName(), "Store record with name:"+vcard.getName());
 			vcard.setId(db.insert(VCardTable.VCARD_TABLE, null, val));
+			System.out.println("insert");
 		}
 	}
 	
@@ -132,7 +135,7 @@ public class VCardDataSource {
 	{
 		if (!oppened) open();
 		List<VCard> results = new ArrayList<VCard>();
-		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_NAME +"="+name, null, null, null, null);
+		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_NAME +"='"+name+"'", null, null, null, null);
 		cursor.moveToFirst();
 		while(!cursor.isAfterLast())
 		{
@@ -146,7 +149,7 @@ public class VCardDataSource {
 	{
 		if (!oppened) open();
 		List<VCard> results = new ArrayList<VCard>();
-		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_NIP +"="+nip, null, null, null, null);
+		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_NIP +"='"+nip+"'", null, null, null, null);
 		cursor.moveToFirst();
 		while(!cursor.isAfterLast())
 		{
@@ -160,7 +163,7 @@ public class VCardDataSource {
 	{
 		if (!oppened) open();
 		List<VCard> results = new ArrayList<VCard>();
-		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_REGON +"="+regon, null, null, null, null);
+		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_REGON +"='"+regon+"'", null, null, null, null);
 		cursor.moveToFirst();
 		while(!cursor.isAfterLast())
 		{
@@ -174,7 +177,7 @@ public class VCardDataSource {
 	{
 		if (!oppened) open();
 		List<VCard> results = new ArrayList<VCard>();
-		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_NIP +"="+nip+ " AND "+VCardTable.COLUMN_REGON +"="+regon , null, null, null, null);
+		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_NIP +"='"+nip+ "' AND "+VCardTable.COLUMN_REGON +"='"+regon+"'" , null, null, null, null);
 		cursor.moveToFirst();
 		while(!cursor.isAfterLast())
 		{
@@ -188,7 +191,7 @@ public class VCardDataSource {
 	{
 		if (!oppened) open();
 		List<VCard> results = new ArrayList<VCard>();
-		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_URI +"="+uri, null, null, null, null);
+		Cursor cursor = db.query(VCardTable.VCARD_TABLE, VCardTable.allColumns, VCardTable.COLUMN_URI +"='"+uri+"'", null, null, null, null);
 		cursor.moveToFirst();
 		while(!cursor.isAfterLast())
 		{
