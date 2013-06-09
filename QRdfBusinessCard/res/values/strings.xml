@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QRdf Business Card</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ScanQRCode">Scan QR Code</string>
+    <string name="Title_activity_company_details">Company Details</string>
+    <string name="Name">Company Name</string>
+    <string name="NIP">NIP</string>
+    <string name="REGON">REGON</string>
+    <string name="Addres">Address</string>
+    <string name="EMail">Email</string>
+    <string name="Back">Back</string>
+    <string name="Details">Details</string>
+    <string name="BankName">Bank Name</string>
+    <string name="AccountNumber">Account Number</string>
+    <string name="SendMailTo">Send Mail</string>
+    <string name="SendMailTo_Short">\@</string>
+    <string name="AddToContacts">Add to Contacts</string>
+    <string name="Close">Close</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="BasicDesc">Application operates on Buissness Cards in b2boo rdf format. We can read your Busissness Card just by scanning QRCode.</string>
+    <string name="ChooseOperation">Choose operation:</string>
+    <string name="BuissnessCardsFromContacts">Show Stored Contacts</string>
+    <string name="StoredVCards">Stored Buissness Cards</string>
+    <string name="title_activity_stored_buissness_cards_list">StoredBuissnessCardsListActivity</string>
+    <string name="AddToStore">Add to Store</string>
+    <string name="RemoveFromStore">Remove from Store</string>
+    <string name="ShowStore">Show Store</string>
+
+</resources>

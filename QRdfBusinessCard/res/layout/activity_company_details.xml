@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CompanyDetailsActivity" >
+
+    <TextView
+        android:id="@+id/CompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/Name"
+        android:text="@string/Name"
+        android:textSize="12pt"
+        android:textStyle="bold" >
+
+        <requestFocus android:layout_width="match_parent" />
+    </TextView>
+
+    <TextView
+        android:id="@+id/REGONLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyName"
+        android:layout_below="@+id/CompanyName"
+        android:inputType="none"
+        android:text="@string/REGON"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/REGON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyName"
+        android:layout_below="@+id/REGONLabel"
+        android:contentDescription="@string/REGON"
+        android:inputType="none" />
+
+    <TextView
+        android:id="@+id/NIPLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/REGON"
+        android:layout_below="@+id/REGON"
+        android:inputType="none"
+        android:text="@string/NIP"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/NIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/REGON"
+        android:layout_below="@+id/NIPLabel"
+        android:contentDescription="@string/NIP"
+        android:inputType="none" />
+
+    <TextView
+        android:id="@+id/CompanyEMailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/NIP"
+        android:layout_below="@+id/NIP"
+        android:text="@string/EMail"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/CompanyEMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/NIP"
+        android:layout_below="@+id/CompanyEMailLabel"
+        android:contentDescription="@string/EMail" />
+
+    <TextView
+        android:id="@+id/CompanyAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyEMail"
+        android:layout_below="@+id/CompanyEMail"
+        android:text="@string/Addres"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/CompanyAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyEMail"
+        android:layout_below="@+id/CompanyAddressLabel" />
+
+    <TextView
+        android:id="@+id/CompanyBankNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyAddress"
+        android:layout_below="@+id/CompanyAddress"
+        android:text="@string/BankName"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/CompanyBankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyAddress"
+        android:layout_below="@+id/CompanyBankNameLabel"
+        android:contentDescription="@string/BankName" />
+
+    <TextView
+        android:id="@+id/CompanyAccountNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyAccountNumberLabel"
+        android:layout_below="@+id/CompanyBankName"
+        android:text="@string/AccountNumber"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/CompanyAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyAccountNumberLabel"
+        android:layout_below="@+id/CompanyAccountNumberLabel" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CompanyEMail"
+        android:layout_alignParentBottom="true" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/returnButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Back" />
+
+            <Button
+                android:id="@+id/sendEmailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/SendMailTo_Short" />
+
+            <Button
+                android:id="@+id/addToContactsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/AddToContacts" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/addToCardsStore"
+                android:layout_span="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/AddToStore" 
+                />
+		    <Button
+                android:id="@+id/showCardsStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ShowStore" />
+
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

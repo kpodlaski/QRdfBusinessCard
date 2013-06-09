@@ -1,0 +1,20 @@
+:firma a b2bo:Entity;
+b2bo:name "Firma Fajna sp. z o.o."@pl;
+b2bo:nip "666-123-12-43"^^xsd:string;
+b2bo:regon "15684653"^^xsd:string;
+b2bo:address
+[a b2bo:Address;
+b2bo:locality "Warszawa"@pl;
+b2bo:street "Nowa"@pl;
+b2bo:houseNumber "12"^^xsd:int;
+b2bo:flatNumber "23"^^xsd:int;
+b2bo:postalCode
+"01-123"^^xsd :string;
+b2bo:postOffice "Warszawa"@pl;];
+b2bo:accountNumber
+"1234 1234 1231 1244 1234
+001"^^xsd:string;
+b2bo:bankName
+dbpedia:PKO_Bank_Polski;
+b2bo:mailto
+<mailto:office@fajnafirma.pl>.
