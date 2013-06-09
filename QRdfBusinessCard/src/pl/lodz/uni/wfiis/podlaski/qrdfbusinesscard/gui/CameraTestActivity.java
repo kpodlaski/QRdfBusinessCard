@@ -31,6 +31,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.Button;
+import android.widget.Toast;
 
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
@@ -179,6 +180,7 @@ public class CameraTestActivity extends Activity implements ResultsListener
                     for (Symbol sym : syms) {
                         scanText.setText(sym.getData());
                         barcodeScanned = true;
+                        Toast.makeText(CameraTestActivity.this, "Scan finished", Toast.LENGTH_LONG).show();
                     }
                 }
             }

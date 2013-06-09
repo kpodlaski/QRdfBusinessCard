@@ -19,7 +19,7 @@
     <string name="SendMailTo_Short">\@</string>
     <string name="AddToContacts">Add to Contacts</string>
     <string name="Close">Close</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">QRdf Business Card</string>
     <string name="BasicDesc">Application operates on Buissness Cards in b2boo rdf format. We can read your Busissness Card just by scanning QRCode.</string>
     <string name="ChooseOperation">Choose operation:</string>
     <string name="BuissnessCardsFromContacts">Show Stored Contacts</string>
